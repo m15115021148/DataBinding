@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="layoutId"
+            type="java.lang.Integer" />
+
+        <variable
+            name="common"
+            type="com.geek.mvvmdemo.vm.CommonVm" />
+
+        <variable
+            name="user"
+            type="com.geek.mvvmdemo.vm.UserVm"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/include_title"
+            bind:common="@{common}"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            bind:layoutId="@{layoutId}"
+            bind:listData="@{user.adapterModule}" />
+
+
+    </LinearLayout>
+
+</layout>
