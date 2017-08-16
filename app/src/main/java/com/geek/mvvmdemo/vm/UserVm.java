@@ -6,6 +6,7 @@ import android.widget.Toast;
 
 import com.geek.mvvmdemo.adapter.AdapterModule;
 import com.geek.mvvmdemo.model.UserModel;
+import com.geek.mvvmdemo.util.ToastUtil;
 
 /**
  * Created by chenMeng on 2017/8/14.
@@ -24,7 +25,7 @@ public class UserVm {
     }
 
     public void onClick(int position){
-        Toast.makeText(mContext,"点击"+position,Toast.LENGTH_SHORT).show();
+        ToastUtil.showBottomShort(mContext,"点击"+position);
     }
 
     public AdapterModule<UserModel> getAdapterModule() {

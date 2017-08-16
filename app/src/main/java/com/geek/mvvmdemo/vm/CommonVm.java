@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import com.android.databinding.library.baseAdapters.BR;
 import com.geek.mvvmdemo.model.UserModel;
+import com.geek.mvvmdemo.util.ToastUtil;
 
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class CommonVm extends BaseObservable{
     }
 
     public void onBack(){
-        Toast.makeText(mContext,"主页面",Toast.LENGTH_SHORT).show();
+        ToastUtil.showBottomShort(mContext,"主页面");
     }
 
     public void select(){

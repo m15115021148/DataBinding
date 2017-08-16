@@ -17,12 +17,11 @@ import com.geek.mvvmdemo.vm.UserVm;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     private ActivityMainBinding mBinding;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void initData() {
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         //数据
