@@ -25,6 +25,7 @@ public class UserModel extends BaseObservable {
 
     public void setUserName(String userName) {
         this.userName = userName;
+        notifyPropertyChanged(BR.userName);
     }
 
     public String getUserAge() {
@@ -33,6 +34,7 @@ public class UserModel extends BaseObservable {
 
     public void setUserAge(String userAge) {
         this.userAge = userAge;
+        notifyPropertyChanged(BR.userAge);
     }
 
     public String getUserSex() {
@@ -41,6 +43,7 @@ public class UserModel extends BaseObservable {
 
     public void setUserSex(String userSex) {
         this.userSex = userSex;
+        notifyPropertyChanged(BR.userSex);
     }
 
     public String getSelect() {
